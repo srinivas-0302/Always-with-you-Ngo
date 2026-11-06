@@ -1,0 +1,48 @@
+{% extends 'ngo_app/base.html' %}
+{% load static %}
+{% block title %}About Us - Always With You{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="{% static 'images/bg.jpg' %}" alt="About NGO" class="img-fluid rounded shadow">
+    </div>
+    <div class="col-md-6">
+      <h2 style="color:#b5179e;">About Our NGO</h2>
+      <p>We are dedicated to transforming lives through education, healthcare, and compassion.</p>
+      <p>Founded in 2015, we’ve impacted thousands of families through sustainable programs and volunteer work.</p>
+      <a href="{% url 'contact' %}" class="btn btn-gradient mt-3">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-center">
+  <h3 style="color:#6c63ff;">Our Core Values</h3>
+  <div class="row g-4 mt-4">
+    <div class="col-md-4">
+      <div class="card border-0 shadow">
+        <div class="card-body">
+          <h5>Integrity</h5>
+          <p>We maintain transparency and accountability in all actions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 shadow">
+        <div class="card-body">
+          <h5>Compassion</h5>
+          <p>We believe in kindness, empathy, and inclusion for all communities.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 shadow">
+        <div class="card-body">
+          <h5>Sustainability</h5>
+          <p>Our goal is to create programs that last and grow with people’s needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

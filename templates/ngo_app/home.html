@@ -1,0 +1,9 @@
+{% extends 'ngo_app/base.html' %}
+{% block title %}Home - Always With You{% endblock %}
+{% block content %}
+<div class="text-center">
+  <h1 class="gradient-title" style="color: linear-gradient(90deg, #4361ee, #b5179e);">Welcome to Always With You</h1>
+  <p class="mt-3">We aim to make the world brighter with compassion and support.</p>
+  <a href="{% url 'donate' %}" class="btn btn-gradient mt-4 px-4 py-2">Donate Now</a>
+</div>
+{% endblock %}

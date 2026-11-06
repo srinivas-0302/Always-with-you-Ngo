@@ -1,0 +1,45 @@
+{% extends 'ngo_app/base.html' %}
+{% block title %}Contact Us - Always With You{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card mt-5 shadow-lg border-0">
+      <div class="card-header"><h3>📞 Contact Us</h3></div>
+      <div class="card-body">
+        {% if success %}
+          <div class="alert alert-success text-center">
+            Thank you, {{ name }}! We’ll get back to you soon 💬
+          </div>
+        {% endif %}
+        <form method="POST">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label class="form-label">Your Name</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Subject</label>
+            <input type="text" name="subject" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="message" rows="4" class="form-control" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-gradient px-4">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p><strong>Email:</strong> info@myngo.org</p>
+      <p><strong>Phone:</strong> +91 99999 99999</p>
+      <p><strong>Address:</strong> Hyderabad, India</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
